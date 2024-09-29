@@ -2,8 +2,6 @@
 
 class Grafica_Rapida_Activator {
     public static function activate() {
-        // Lógica de ativação existente (se houver)
-
         // Configurar a tarefa de exclusão automática de arquivos
         require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-grafica-rapida-file-manager.php';
         $file_manager = new Grafica_Rapida_File_Manager();
@@ -24,5 +22,10 @@ class Grafica_Rapida_Activator {
             'delete_after' => 30
         );
         update_option('grafica_rapida_upload_options', $default_options);
+
+        // Criar a tabela de acabamentos
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-grafica-rapida-acabamentos.php';
+        $acabamentos = new Grafica_Rapida_Acabamentos();
+        $acabamentos->create_table();
     }
 }

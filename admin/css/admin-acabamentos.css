@@ -1,0 +1,83 @@
+.grafica-rapida-acabamentos {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin: 20px auto;
+}
+
+.grafica-rapida-acabamentos h1 {
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0 0 20px;
+    padding: 9px 0 4px;
+    line-height: 29px;
+}
+
+#toggle-form {
+    margin-bottom: 20px;
+}
+
+#acabamento-form {
+    background: #f9f9f9;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-table th {
+    width: 200px;
+    padding: 20px 10px 20px 0;
+}
+
+.form-table td {
+    padding: 15px 10px;
+}
+
+.form-table input[type="text"],
+.form-table input[type="number"] {
+    width: 100%;
+    max-width: 400px;
+}
+
+.wp-list-table {
+    margin-top: 20px;
+}
+
+.wp-list-table th {
+    font-weight: 600;
+}
+
+.wp-list-table td {
+    vertical-align: middle;
+}
+
+.wp-list-table .button {
+    margin-right: 5px;
+}
+
+.button.edit-acabamento,
+.button.delete-acabamento {
+    padding: 4px 8px;
+}
+
+.button.edit-acabamento {
+    background: #007cba;
+    border-color: #007cba;
+    color: #fff;
+}
+
+.button.delete-acabamento {
+    background: #ca4a1f;
+    border-color: #ca4a1f;
+    color: #fff;
+}
+
+.button.edit-acabamento:hover,
+.button.delete-acabamento:hover {
+    opacity: 0.8;
+}
+
+.notice {
+    margin: 20px 0;
+}
