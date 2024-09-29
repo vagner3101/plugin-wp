@@ -12,8 +12,8 @@ jQuery(document).ready(function($) {
     // Atualizar campos quando o tipo de venda mudar
     $('#_tipo_venda').change(toggleFields);
 
-    // Mostrar/ocultar valor de criação de arte
-    function toggleCriacaoArte() {
+    // Função para mostrar/ocultar o campo de valor da criação de arte
+    function toggleValorCriacaoArte() {
         if ($('#_tem_criacao_arte').is(':checked')) {
             $('#_valor_criacao_arte').closest('.form-field').show();
         } else {
@@ -21,11 +21,11 @@ jQuery(document).ready(function($) {
         }
     }
 
-    // Inicializar campo de criação de arte
-    toggleCriacaoArte();
+    // Inicializar o estado do campo de valor da criação de arte
+    toggleValorCriacaoArte();
 
-    // Atualizar campo quando a opção de criação de arte mudar
-    $('#_tem_criacao_arte').change(toggleCriacaoArte);
+    // Atualizar o estado quando o checkbox for alterado
+    $('#_tem_criacao_arte').change(toggleValorCriacaoArte);
 
     // Função para atualizar a miniatura do ícone
     function updateIconPreview(select) {

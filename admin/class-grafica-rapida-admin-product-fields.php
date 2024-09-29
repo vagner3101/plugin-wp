@@ -109,13 +109,15 @@ class Grafica_Rapida_Admin_Product_Fields {
         woocommerce_wp_checkbox(array(
             'id' => '_tem_criacao_arte',
             'label' => 'Tem Criação de Arte?',
-            'description' => 'Marque se este produto tem opção de criação de arte'
+            'description' => 'Marque se este produto tem opção de criação de arte',
+            'value' => get_post_meta($post->ID, '_tem_criacao_arte', true) === 'yes' ? 'yes' : 'no',
         ));
         woocommerce_wp_text_input(array(
             'id' => '_valor_criacao_arte',
             'label' => 'Valor da Criação de Arte',
             'type' => 'number',
-            'custom_attributes' => array('step' => '0.01', 'min' => '0')
+            'custom_attributes' => array('step' => '0.01', 'min' => '0'),
+            'value' => get_post_meta($post->ID, '_valor_criacao_arte', true),
         ));
 
         echo '<div class="grafica-rapida-divider"></div>';
@@ -181,14 +183,20 @@ class Grafica_Rapida_Admin_Product_Fields {
             '_larguras_padrao_ml',
             '_altura_minima_ml',
             '_altura_maxima_ml',
-            '_tem_criacao_arte',
-            '_valor_criacao_arte'
         );
 
         foreach ($fields as $field) {
             if (isset($_POST[$field])) {
                 update_post_meta($post_id, $field, sanitize_text_field($_POST[$field]));
             }
+        }
+
+        // Salvar campo de criação de arte
+        $tem_criacao_arte = isset($_POST['_tem_criacao_arte']) ? 'yes' : 'no';
+        update_post_meta($post_id, '_tem_criacao_arte', $tem_criacao_arte);
+
+        if (isset($_POST['_valor_criacao_arte'])) {
+            update_post_meta($post_id, '_valor_criacao_arte', sanitize_text_field($_POST['_valor_criacao_arte']));
         }
 
         // Salvar valores de quantidade
