@@ -15,10 +15,24 @@ class Grafica_Rapida_Admin_Menu {
             'dashicons-store',
             30
         );
+
+        add_submenu_page(
+            'grafica-rapida',
+            'Uploads',
+            'Uploads',
+            'manage_options',
+            'grafica-rapida-uploads',
+            array($this, 'display_uploads_page')
+        );
     }
 
     public function display_admin_page() {
         $admin_page = new Grafica_Rapida_Admin_Page();
         $admin_page->render_page();
+    }
+
+    public function display_uploads_page() {
+        $uploads_page = new Grafica_Rapida_Admin_Uploads();
+        $uploads_page->render_page();
     }
 }
