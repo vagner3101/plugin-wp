@@ -1,0 +1,95 @@
+.options_group {
+    padding: 10px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.metro_quadrado_fields,
+.metro_linear_fields,
+.quantidade_fields,
+.acabamentos_fields {
+    display: none;
+}
+
+.select2-container {
+    width: 50% !important;
+}
+
+.gabaritos_fields {
+    margin-top: 20px;
+}
+
+.gabarito_field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.gabarito_field select,
+.gabarito_field input[type="text"],
+.gabarito_field img,
+.gabarito_field button {
+    margin-right: 10px;
+}
+
+.gabarito_field select {
+    width: 150px;
+}
+
+.gabarito_field input[type="text"] {
+    width: 250px;
+}
+
+.gabarito_field img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.gabarito_field .remove_gabarito {
+    flex-shrink: 0;
+}
+
+.add_gabarito {
+    margin-top: 15px;
+}
+
+/* Estilo para o campo de acabamentos */
+#_acabamentos {
+    width: 50%;
+}
+
+/* Estilo para o campo de criação de arte */
+#_tem_criacao_arte {
+    margin-right: 5px;
+}
+
+#_valor_criacao_arte {
+    width: 50%;
+}
+
+/* Ajuste para alinhar os labels */
+.form-field label {
+    display: inline-block;
+    width: 150px;
+}
+
+/* Ajuste para os campos de entrada */
+.form-field input[type="text"],
+.form-field input[type="number"],
+.form-field textarea {
+    width: calc(50% - 150px);
+}
+
+/* Estilo para os títulos das seções */
+.options_group h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Divisores */
+.grafica-rapida-divider {
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
