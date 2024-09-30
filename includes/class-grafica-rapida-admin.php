@@ -80,7 +80,7 @@ class Grafica_Rapida_Admin {
         $count = isset($_POST['count']) ? intval($_POST['count']) : 0;
         
         $admin_product_fields = new Grafica_Rapida_Admin_Product_Fields();
-        $admin_product_fields->gabarito_field($count);
+        echo $admin_product_fields->gabarito_field($count);
         
         wp_die();
     }

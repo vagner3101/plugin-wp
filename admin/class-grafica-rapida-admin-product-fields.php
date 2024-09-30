@@ -125,14 +125,16 @@ class Grafica_Rapida_Admin_Product_Fields {
         // Gabaritos
         echo '<div class="gabaritos_fields">';
         echo '<h4>Gabaritos</h4>';
+        echo '<div id="gabaritos_container">';
         $gabaritos = get_post_meta($post->ID, '_gabaritos', true);
         $count = 0;
         if ($gabaritos) {
             foreach ($gabaritos as $gabarito) {
-                $this->gabarito_field($count, $gabarito);
+                echo $this->gabarito_field($count, $gabarito);
                 $count++;
             }
         }
+        echo '</div>';
         echo '<button type="button" class="button add_gabarito">Adicionar Gabarito</button>';
         echo '</div>';
 
@@ -141,6 +143,7 @@ class Grafica_Rapida_Admin_Product_Fields {
 
     public function gabarito_field($count, $gabarito = array()) {
         $icones = $this->get_icones();
+        ob_start();
         ?>
         <div class="gabarito_field">
             <select name="gabaritos[<?php echo $count; ?>][icone]" class="gabarito-icone-select">
@@ -155,6 +158,7 @@ class Grafica_Rapida_Admin_Product_Fields {
             <button type="button" class="button remove_gabarito">Remover</button>
         </div>
         <?php
+        return ob_get_clean();
     }
 
     private function get_acabamentos() {

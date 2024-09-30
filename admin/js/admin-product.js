@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
                 security: grafica_rapida_ajax.nonce
             },
             success: function(response) {
-                $('.gabaritos_fields').append(response);
+                $('#gabaritos_container').append(response);
                 // Atualizar miniatura para o novo campo
                 $('.gabarito-icone-select').last().each(function() {
                     updateIconPreview(this);
