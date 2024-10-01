@@ -1,87 +1,88 @@
-.options_group {
+/* Estilos específicos para o plugin Gráfica Rápida */
+.grafica-rapida-fields {
     padding: 10px;
     border: 1px solid #eee;
     margin-bottom: 10px;
 }
 
-.metro_quadrado_fields,
-.metro_linear_fields,
-.quantidade_fields,
-.acabamentos_fields {
+.grafica-rapida-fields .metro_quadrado_fields,
+.grafica-rapida-fields .metro_linear_fields,
+.grafica-rapida-fields .quantidade_fields,
+.grafica-rapida-fields .acabamentos_fields {
     display: none;
 }
 
-.select2-container {
+.grafica-rapida-fields .select2-container {
     width: 50% !important;
 }
 
-.gabaritos_fields {
+.grafica-rapida-fields .gabaritos_fields {
     margin-top: 20px;
 }
 
-.gabarito_field {
+.grafica-rapida-fields .gabarito_field {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
 
-.gabarito_field select,
-.gabarito_field input[type="text"],
-.gabarito_field img,
-.gabarito_field button {
+.grafica-rapida-fields .gabarito_field select,
+.grafica-rapida-fields .gabarito_field input[type="text"],
+.grafica-rapida-fields .gabarito_field img,
+.grafica-rapida-fields .gabarito_field button {
     margin-right: 10px;
 }
 
-.gabarito_field select {
+.grafica-rapida-fields .gabarito_field select {
     width: 150px;
 }
 
-.gabarito_field input[type="text"] {
-    width: 250px;
+.grafica-rapida-fields .gabarito_field input[type="text"] {
+    width: 450px;
 }
 
-.gabarito_field img {
+.grafica-rapida-fields .gabarito_field img {
     max-width: 30px;
     max-height: 30px;
 }
 
-.gabarito_field .remove_gabarito {
+.grafica-rapida-fields .gabarito_field .remove_gabarito {
     flex-shrink: 0;
 }
 
-.add_gabarito {
+.grafica-rapida-fields .add_gabarito {
     margin-top: 15px;
 }
 
 /* Estilo para o campo de acabamentos */
-#_acabamentos {
+.grafica-rapida-fields #_acabamentos {
     width: 50%;
 }
 
 /* Estilo para o campo de criação de arte */
-#_tem_criacao_arte {
+.grafica-rapida-fields #_tem_criacao_arte {
     margin-right: 5px;
 }
 
-#_valor_criacao_arte {
+.grafica-rapida-fields #_valor_criacao_arte {
     width: 50%;
 }
 
 /* Ajuste para alinhar os labels */
-.form-field label {
+.grafica-rapida-fields .form-field label {
     display: inline-block;
     width: 150px;
 }
 
 /* Ajuste para os campos de entrada */
-.form-field input[type="text"],
-.form-field input[type="number"],
-.form-field textarea {
+.grafica-rapida-fields .form-field input[type="text"],
+.grafica-rapida-fields .form-field input[type="number"],
+.grafica-rapida-fields .form-field textarea {
     width: calc(50% - 150px);
 }
 
 /* Estilo para os títulos das seções */
-.options_group h4 {
+.grafica-rapida-fields h4 {
     margin-top: 20px;
     margin-bottom: 10px;
     padding-bottom: 5px;
@@ -89,7 +90,32 @@
 }
 
 /* Divisores */
-.grafica-rapida-divider {
+.grafica-rapida-fields .grafica-rapida-divider {
     border-top: 1px solid #eee;
     margin: 20px 0;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 782px) {
+    .grafica-rapida-fields .form-field input[type="text"],
+    .grafica-rapida-fields .form-field input[type="number"],
+    .grafica-rapida-fields .form-field textarea,
+    .grafica-rapida-fields .select2-container {
+        width: 100% !important;
+    }
+
+    .grafica-rapida-fields .form-field label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .grafica-rapida-fields .gabarito_field {
+        flex-wrap: wrap;
+    }
+
+    .grafica-rapida-fields .gabarito_field select,
+    .grafica-rapida-fields .gabarito_field input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }

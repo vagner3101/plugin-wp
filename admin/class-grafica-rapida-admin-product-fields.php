@@ -11,7 +11,7 @@ class Grafica_Rapida_Admin_Product_Fields {
     public function add_custom_fields() {
         global $woocommerce, $post;
 
-        echo '<div class="options_group">';
+        echo '<div class="options_group grafica-rapida-fields">';
 
         // Tipo de Venda
         woocommerce_wp_select(array(
@@ -138,7 +138,7 @@ class Grafica_Rapida_Admin_Product_Fields {
         echo '<button type="button" class="button add_gabarito">Adicionar Gabarito</button>';
         echo '</div>';
 
-        echo '</div>';
+        echo '</div>'; // Fechando .grafica-rapida-fields
     }
 
     public function gabarito_field($count, $gabarito = array()) {
